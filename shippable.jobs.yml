@@ -13,9 +13,9 @@ jobs:
       - IN: notify-imagerunc1
       - IN: triggernotify1
     on_start:
-     # - NOTIFY: notify-slack
+      - NOTIFY: notify-slack
       - NOTIFY: notify-emailcock1
     on_success:
-      #- NOTIFY: notify-slack
+      - NOTIFY: notify-slack
       - NOTIFY: notify-emailcock1
       
