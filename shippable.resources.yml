@@ -6,7 +6,7 @@ resources:
       
   - name: notify-imagerunc1
     type: image
-    integration: cock1-hub
+    integration: "cock1-hub"
     pointer:
       sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
     seed:
@@ -14,7 +14,7 @@ resources:
   
   - name: notify-imageredis
     type: image
-    integration: shiphitchcock1-docker
+    integration: "cock1-hub"
     pointer:
       sourceName: "redis" # run database or soemthing in order to test links docker options
     seed:
