@@ -57,11 +57,11 @@ resources:
       memory: 64
       portMappings:
         - "80:80"
-      volumes:
-        - "/host/path.2:/container/path:rw"
-        - "/host/path:/container/path2:rw"
-      volumesFrom:
-        - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8fd6-7f4d2516abb5"
+     # volumes:
+      #  - "/host/path.2:/container/path:rw"
+       # - "/host/path:/container/path2:rw"
+      #volumesFrom:
+       # - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8fd6-7f4d2516abb5"
         
   - name: notify-ecscluster
     type: cluster
