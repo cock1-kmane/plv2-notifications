@@ -12,6 +12,8 @@ jobs:
       - NOTIFY: notify-emailcock1
     on_success:
       - NOTIFY: notify-emailcock1
+      - NOTIFY: notify-emailvarsha
+      - NOTIFY: notify-slack
       
   - name: notify-man1
     type: manifest
