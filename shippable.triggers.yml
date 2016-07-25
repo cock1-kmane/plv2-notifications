@@ -8,3 +8,8 @@ triggers:
      type: trigger
      version:
        counter: 3
+       
+   - name: triggernotify3
+     type: trigger
+     version:
+       counter: 1
