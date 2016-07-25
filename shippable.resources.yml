@@ -45,11 +45,11 @@ resources:
         -  "varsha@shippable.com"
         
   - name: notify-emailcock1
-    type: notificationemail
+    type: notification
     integration: "plv2-emailcock1"
     pointer:
       recipients: 
-        -  "shiphitchcock1@gmail.com"
+        -  "shiptestable123098@gmail.com"
         
   - name: notify-dopts
     type: dockerOptions
