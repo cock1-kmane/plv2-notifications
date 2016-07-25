@@ -28,6 +28,10 @@ jobs:
       - IN: notify-imageinvalid
       - IN: triggernotify1
       - IN: notify-dopts
+    on_start:
+      - NOTIFY: notify-emailcock1
+    on_success:
+      - NOTIFY: notify-emailcock1
       
   - name: notify-ecsdeploy
     type: ecsDeploy
