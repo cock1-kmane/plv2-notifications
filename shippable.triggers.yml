@@ -1,0 +1,10 @@
+triggers:
+   - name: triggernotify1
+     type: trigger
+     version:
+       counter: 1
+       
+   - name: triggernotify1
+     type: trigger
+     version:
+       counter: 1
