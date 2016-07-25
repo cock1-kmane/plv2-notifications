@@ -13,10 +13,16 @@ jobs:
       - IN: notify-imagerunc1
       - IN: triggernotify1
       - IN: notify-dopts
+      
+  - name: notify-ecsdeploy
+    type: ecsDeploy
+    steps:
+      - IN: notify-man1
+      - IN: notify-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
     on_start:
       - NOTIFY: notify-slack
       - NOTIFY: notify-emailcock1
     on_success:
-      - NOTIFY: notify-slack
       - NOTIFY: notify-emailcock1
-      
