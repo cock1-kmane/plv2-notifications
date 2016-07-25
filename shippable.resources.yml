@@ -16,9 +16,9 @@ resources:
     type: image
     integration: "cock1-hub"
     pointer:
-      sourceName: "shiphitchcock1/betaci"
+      sourceName: "shiphitch/betaci"
     seed:
-      versionName: "deploy.4"
+      versionName: "test123"
   
   - name: notify-imageredis
     type: image
