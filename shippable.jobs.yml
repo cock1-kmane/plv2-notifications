@@ -6,6 +6,11 @@ jobs:
       - TASK: managed
         bump: patch
       - IN: notify-man1
+    on_start:
+      - NOTIFY: notify-slack
+      - NOTIFY: notify-emailcock1
+    on_success:
+      - NOTIFY: notify-emailcock1
       
   - name: notify-man1
     type: manifest
