@@ -30,7 +30,7 @@ resources:
       
   - name: notify-slack
     type: notification
-    integration: "plv2-slackcock1"
+    integration: "plv2-slackcock1test"
     pointer:
       recipients:
         - "#pipeline-public"
