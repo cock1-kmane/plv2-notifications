@@ -20,6 +20,13 @@ jobs:
       - IN: triggernotify1
       - IN: notify-dopts
       
+  - name: notify-man2
+    type: manifest
+    steps:
+      - IN: notify-imageinvalid
+      - IN: triggernotify1
+      - IN: notify-dopts
+      
   - name: notify-ecsdeploy
     type: ecsDeploy
     steps:
