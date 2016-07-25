@@ -11,7 +11,7 @@ jobs:
     type: manifest
     steps:
       - IN: notify-imagerunc1
-      triggernotify1
+      - triggernotify1
     on_start:
       - NOTIFY: notify-slack
       - NOTIFY: notify-emailcock1
