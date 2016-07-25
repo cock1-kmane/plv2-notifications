@@ -30,8 +30,10 @@ jobs:
       - IN: notify-dopts
     on_start:
       - NOTIFY: notify-emailcock1
+      - NOTIFY: notify-slack2
     on_success:
       - NOTIFY: notify-emailcock1
+      - NOTIFY: notify-slack2
       
   - name: notify-ecsdeploy
     type: ecsDeploy
