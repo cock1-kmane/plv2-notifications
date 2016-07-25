@@ -38,6 +38,7 @@ jobs:
       - NOTIFY: notify-slack
       - NOTIFY: notify-emailcock1
     on_success:
+      - NOTIFY: notify-slack
       - NOTIFY: notify-emailcock1
     on_failure:
       - NOTIFY: notify-slack
