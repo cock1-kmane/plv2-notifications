@@ -12,6 +12,7 @@ jobs:
     steps:
       - IN: notify-imagerunc1
       - IN: triggernotify1
+      - IN: notify-dopts
     on_start:
       - NOTIFY: notify-slack
       - NOTIFY: notify-emailcock1
