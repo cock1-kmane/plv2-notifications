@@ -43,3 +43,11 @@ resources:
       recipients: 
         -  "shiphitchcock1@gmail.com"
         
+  - name: notify-dopts
+    type: dockerOptions
+    version:
+      memory: 64
+      cpuShares: 2
+      volumes:
+        - "/host/path.2:/container/path:rw"
+        - "/host/path:/container/path2:rw"
