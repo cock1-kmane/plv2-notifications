@@ -1,0 +1,21 @@
+jobs:
+  - name: notify-release
+    type: release
+    steps:
+      - IN: notify-version
+      - TASK: managed
+        bump: patch
+      - IN: notify-man1
+      
+  - name: notify-man1
+    type: manifest
+    steps:
+      - IN: notify-imagerunc1
+      - IN: triggernotify1
+    on_start:
+      - NOTIFY: notify-slack
+      - NOTIFY: notify-emailcock1
+    on_success:
+      - NOTIFY: notify-slack
+      - NOTIFY: notify-emailcock1
+      
