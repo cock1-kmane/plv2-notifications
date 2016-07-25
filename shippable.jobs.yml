@@ -17,7 +17,7 @@ jobs:
     type: manifest
     steps:
       - IN: notify-imagerunc1
-      - IN: triggernotify1
+      - IN: triggernotify3
       - IN: notify-dopts
       
   - name: notify-man2
