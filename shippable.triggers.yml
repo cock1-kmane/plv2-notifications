@@ -2,7 +2,7 @@ triggers:
    - name: triggernotify1
      type: trigger
      version:
-       counter: 4
+       counter: 5
        
    - name: triggernotify2
      type: trigger
