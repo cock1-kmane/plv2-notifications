@@ -45,7 +45,7 @@ resources:
         -  "varsha@shippable.com"
         
   - name: notify-emailcock1
-    type: notification
+    type: notificationemail
     integration: "plv2-emailcock1"
     pointer:
       recipients: 
