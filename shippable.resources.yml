@@ -36,6 +36,13 @@ resources:
         - "#pipeline-public"
         - "#pipeline-pvt"
         - "@shiphitchcock1"
+        
+  - name: notify-slack2
+    type: notification
+    integration: "plv2-slackcock1"
+    pointer:
+      recipients:
+        - "#pipeline-pvt"
 
   - name: notify-emailvarsha
     type: notification
