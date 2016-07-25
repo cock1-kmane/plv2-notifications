@@ -12,4 +12,4 @@ triggers:
    - name: triggernotify3
      type: trigger
      version:
-       counter: 2
+       counter: 3
