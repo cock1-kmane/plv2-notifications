@@ -6,7 +6,7 @@ resources:
       
   - name: notify-imagerunc1
     type: image
-    integration: shiphitchcock1-docker
+    integration: cock1-hub
     pointer:
       sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
     seed:
