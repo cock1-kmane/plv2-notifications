@@ -1,89 +1,50 @@
 jobs:
-  - name: notify-release
+  - name: sen-release
     type: release
     steps:
-      - IN: notify-version
+      - IN: sen-version
       - TASK: managed
-        bump: patch
-      - IN: notify-man1cnrimg
-      - IN: triggernotify7
+        bump: beta
+      - IN: sen-man1cnrimg
+      - IN: triggersen1
     on_start:
-      - NOTIFY: notify-emailcock1
-      - NOTIFY: notify-slackcock1
+      - NOTIFY: sen-emailcock1
+      - NOTIFY: sen-slackcock1
     on_success:
-      - NOTIFY: notify-emailcock1
-      - NOTIFY: notify-slackcock1
+      - NOTIFY: sen-emailcock1
+      - NOTIFY: sen-slackcock1
       
-  - name: notify-man1cnrimg
+  - name: sen-man1cnrimg
     type: manifest
     steps:
-      - IN: notify-image1cnr
-      - IN: triggernotify1
+      - IN: sen-image1cnr
+      - IN: triggersen2
     on_start:
-      - NOTIFY: notify-email
-      - NOTIFY: notify-slack
+      - NOTIFY: sen-email
+      - NOTIFY: sen-slack
     on_success:
-      - NOTIFY: notify-email
-      - NOTIFY: notify-slack
+      - NOTIFY: sen-email
+      - NOTIFY: sen-slack
       
-  - name: notify-man2entrypoint
+  - name: sen-man2invalid
     type: manifest
     steps:
-      - IN: notify-image4entrypoint
-      - TASK: managed
-      - IN: triggernotify2
-      
-  - name: notify-man3driftking
-    type: manifest
-    steps:
-      - IN: notify-image5workingdir
-      - IN: triggernotify3
-      - TASK: managed
-    
-  - name: notify-man4env
-    type: manifest
-    steps:
-      - IN: notify-image3env
-      - IN: triggernotify1  
-  
-  - name: notify-man5redis
-    type: manifest
-    steps:
-      - IN: notify-image6redis
-      - IN: triggernotify5
-      
-  - name: notify-man6invalid
-    type: manifest
-    steps:
-      - IN: notify-image3env
-      - IN: notify-dopts6invalid
-      - IN: triggernotify6
+      - IN: sen-image2entrypoint
+      - IN: sen-dopts1invalid
+      - IN: triggersen3
 
 # DEPLOYMENTS 
 
   - name: notify-ecsdeployup1
-    type: ecsDeploy
+    type: deploy
     steps:
-      - IN: notify-man6invalid
-      - IN: notify-ecscluster
+      - IN: sen-man2invalid
+      - IN: sen-ecscluster
       - TASK: managed
         deployMethod: upgrade
     on_start:
-      - NOTIFY: notify-email
-      - NOTIFY: notify-slack
+      - NOTIFY: sen-email
+      - NOTIFY: sen-slack
     on_failure:
-      - NOTIFY: notify-email
-      - NOTIFY: notify-slack
-      
-  - name: notify-ecsdeploybg1
-    type: ecsDeploy
-    steps:
-      - IN: notify-man1cnrimg
-      - IN: notify-ecscluster
-    on_start:
-      - NOTIFY: notify-emailcock1
-      - NOTIFY: notify-slackcock1
-    on_success:
-      - NOTIFY: notify-emailcock1
-      - NOTIFY: notify-slackcock1
-      
+      - NOTIFY: sen-email
+      - NOTIFY: sen-slack
