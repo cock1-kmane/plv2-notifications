@@ -1,8 +1,41 @@
 resources:
+  - name: notify-ddccluster
+    type: cluster
+    integration: plv2-ddc
+    pointer:
+      sourceName : "nothing" #we can anything because it is mandatory but ddc doesnot have clusters
+
+  - name: notify-dclcluster
+    type: cluster
+    integration: plv2-dcl
+    pointer:
+     sourceName : "cluster-dcl"
+
+  - name: notify-ecscluster
+    type: cluster
+    integration: plv2-ecs
+    pointer:
+      sourceName : "testCL"
+      region: "us-west-2"
+      
+  - name: notify-gkecluster
+    type: cluster
+    integration: plv2-gke
+    pointer:
+      sourceName: "small-cluster" #name of the cluster we are deploying.
+      region: "us-east1-d"
+      
+  - name: notify-tripubcluster
+    type: cluster
+    integration: plv2-tripub
+    pointer:
+      sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
+      region: "us-east-2"
+
   - name: notify-version
     type: version
     seed:
-      versionName: "1.2.3-beta"
+      versionName: "1.2.123-beta"
       
   - name: notify-slack
     type: notification
@@ -34,3 +67,53 @@ resources:
     pointer:
       recipients:
         - "shiphitchcock1@gmail.com"
+        
+  - name: notify-image1cnr
+    type: image
+    integration: cock1-hub
+    pointer:
+      sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
+    seed:
+      versionName: "deploy.4"
+      
+  - name: notify-image2cnr
+    type: image
+    integration: cock1-hub
+    pointer:
+      sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
+    seed:
+      versionName: "deploy.5"
+      
+  - name: notify-image3env
+    type: image
+    integration: cock1-hub
+    pointer:
+      sourceName: "scriptnull/busybox"
+    seed:
+      versionName: "nodeenv"
+      
+  - name: notify-image4entrypoint
+    type: image
+    integration: cock1-hub
+    pointer:
+      sourceName: "scriptnull/debian"
+    seed:
+      versionName: "entrypoint"
+  
+  - name: notify-image5workingdir
+    type: image
+    integration: cock1-hub
+    pointer:
+      sourceName: "scriptnull/debian"
+    seed:
+      versionName: "driftking"
+      
+  - name: notify-image6redis
+    type: image
+    integration: cock1-hub
+    pointer:
+      sourceName: "redis"
+    seed:
+      versionName: "latest"
+      
+  
