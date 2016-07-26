@@ -60,7 +60,7 @@ jobs:
   - name: notify-ecsdeploybg
     type: deploy
     steps:
-      - IN: notify-man2entrypoint
+      - IN: notify-man1cnrimg
       - IN: notify-ecscluster
       
   - name: notify-tripubdeployup
@@ -74,7 +74,7 @@ jobs:
   - name: notify-tripubdeploybg
     type: deploy
     steps:
-      - IN: notify-man2entrypoint
+      - IN: notify-man1cnrimg
       - IN: notify-tripubcluster
       
   - name: notify-gkedeployup
@@ -88,5 +88,5 @@ jobs:
   - name: notify-gkedeploybg
     type: deploy
     steps:
-      - IN: notify-man2entrypoint
+      - IN: notify-man1cnrimg
       - IN: notify-gkecluster
