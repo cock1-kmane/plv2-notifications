@@ -98,3 +98,11 @@ jobs:
       - IN: notify-dclcluster
       - TASK: managed
         deployMethod: upgrade
+        
+  - name: notify-dcldeploy
+    type: deploy
+    steps:
+      - IN: notify-man3driftking
+      - IN: notify-ddccluster
+      - TASK: managed
+        deployMethod: upgrade
