@@ -91,16 +91,10 @@ jobs:
       - IN: notify-man1cnrimg
       - IN: notify-gkecluster
       
-  - name: notify-dcldeployup
+  - name: notify-dcldeploy
     type: deploy
     steps:
       - IN: notify-man3driftking
       - IN: notify-dclcluster
       - TASK: managed
         deployMethod: upgrade
-      
-  - name: notify-dcldeploybg
-    type: deploy
-    steps:
-      - IN: notify-man1cnrimg
-      - IN: notify-dclcluster
