@@ -52,3 +52,10 @@ jobs:
       - NOTIFY: notify-slack
       - NOTIFY: notify-emailcock1
       
+  - name: notify-ecsdeployup1
+    type: deploy
+    steps:
+      - IN: notify-man1
+      - IN: notify-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
