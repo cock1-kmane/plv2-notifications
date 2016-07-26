@@ -23,3 +23,8 @@ triggers:
      type: trigger
      version:
        counter: 2
+       
+   - name: triggernotify6
+     type: trigger
+     version:
+       counter: 1
