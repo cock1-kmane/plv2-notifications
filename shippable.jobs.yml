@@ -5,7 +5,7 @@ jobs:
       - IN: notify-version
       - TASK: managed
         bump: patch
-      - IN: notify-man1
+      - IN: notify-man1cnrimg
       - IN: triggernotify7
     on_start:
       - NOTIFY: notify-emailcock1
