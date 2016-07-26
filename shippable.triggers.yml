@@ -1,35 +1,25 @@
 triggers:
-   - name: triggernotify1
+   - name: triggersen1
      type: trigger
      version:
-       counter: 7
+       counter: 1
        
-   - name: triggernotify2
+   - name: triggersen2
      type: trigger
      version:
-       counter: 3
+       counter: 1
        
-   - name: triggernotify3
+   - name: triggersen3
      type: trigger
      version:
-       counter: 3
+       counter: 1
        
-   - name: triggernotify4
+   - name: triggersen4
      type: trigger
      version:
-       counter: 3
+       counter: 1
        
-   - name: triggernotify5
-     type: trigger
-     version:
-       counter: 2
-       
-   - name: triggernotify6
-     type: trigger
-     version:
-       counter: 2
-       
-   - name: triggernotify7
+   - name: triggersen5
      type: trigger
      version:
        counter: 1
