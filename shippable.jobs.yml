@@ -99,7 +99,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  - name: notify-dcldeploy
+  - name: notify-ddcdeploy
     type: deploy
     steps:
       - IN: notify-man3driftking
