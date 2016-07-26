@@ -71,7 +71,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
       
-  - name: notify-ecsdeploybg
+  - name: notify-tripubdeploybg
     type: deploy
     steps:
       - IN: notify-man2entrypoint
