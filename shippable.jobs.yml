@@ -6,13 +6,84 @@ jobs:
       - TASK: managed
         bump: patch
       - IN: notify-man1
-      - IN: triggernotify2
+      - IN: triggernotify7
     on_start:
-      - NOTIFY: notify-slack
       - NOTIFY: notify-emailcock1
+      - NOTIFY: notify-slackcock1
     on_success:
       - NOTIFY: notify-emailcock1
-      - NOTIFY: notify-emailvarsha
+      - NOTIFY: notify-slackcock1
+      
+  - name: notify-man1cnrimg
+    type: manifest
+    steps:
+      - IN: notify-image1cnr
+      - IN: triggernotify1
+    on_start:
+      - NOTIFY: notify-email
+      - NOTIFY: notify-slack
+    on_success:
+      - NOTIFY: notify-email
       - NOTIFY: notify-slack
       
+  - name: notify-man2entrypoint
+    type: manifest
+    steps:
+      - IN: notify-image4entrypoint
+      - TASK: managed
+      - IN: triggernotify2
+      
+  - name: notify-man3driftking
+    type: manifest
+    steps:
+      - IN: notify-image5workingdir
+      - IN: triggernotify3
+      - TASK: managed
+    
+  - name: notify-man4env
+    type: manifest
+    steps:
+      - IN: notify-image3env
+      - IN: triggernotify1  
   
+  - name: notify-man5redis
+    type: manifest
+    steps:
+      - IN: notify-image6redis
+      - IN: triggernotify5
+      
+  - name: notify-man6invalid
+    type: manifest
+    steps:
+      - IN: notify-image3env
+      - IN: notify-dopts6invalid
+      - IN: triggernotify6
+
+# DEPLOYMENTS 
+
+  - name: notify-ecsdeployup1
+    type: ecsDeploy
+    steps:
+      - IN: notify-man6invalid
+      - IN: notify-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
+    on_start:
+      - NOTIFY: notify-email
+      - NOTIFY: notify-slack
+    on_failure:
+      - NOTIFY: notify-email
+      - NOTIFY: notify-slack
+      
+  - name: notify-ecsdeploybg1
+    type: ecsDeploy
+    steps:
+      - IN: notify-man1cnrimg
+      - IN: notify-ecscluster
+    on_start:
+      - NOTIFY: notify-emailcock1
+      - NOTIFY: notify-slackcock1
+    on_success:
+      - NOTIFY: notify-emailcock1
+      - NOTIFY: notify-slackcock1
+      
