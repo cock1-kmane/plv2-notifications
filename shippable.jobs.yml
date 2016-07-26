@@ -35,6 +35,12 @@ jobs:
       - NOTIFY: notify-emailcock1
       - NOTIFY: notify-slack2
       
+  - name: notify-man3
+    type: manifest
+    steps:
+      - IN: notify-imagerunc1
+      - IN: triggernotify4
+      
   - name: notify-ecsdeploy
     type: ecsDeploy
     steps:
@@ -55,7 +61,7 @@ jobs:
   - name: notify-ecsdeployup1
     type: deploy
     steps:
-      - IN: notify-man1
+      - IN: notify-man3
       - IN: notify-ecscluster
       - TASK: managed
         deployMethod: upgrade
