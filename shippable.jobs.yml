@@ -41,6 +41,12 @@ jobs:
       - IN: notify-imagerunc2
       - IN: triggernotify4
       
+  - name: notify-man4
+    type: manifest
+    steps:
+      - IN: notify-imagerunc2
+      - IN: triggernotify5
+      
   - name: notify-ecsdeploy
     type: ecsDeploy
     steps:
@@ -65,3 +71,9 @@ jobs:
       - IN: notify-ecscluster
       - TASK: managed
         deployMethod: upgrade
+        
+  - name: notify-ecsdeploybg1
+    type: deploy
+    steps:
+      - IN: notify-man4
+      - IN: notify-ecscluster
