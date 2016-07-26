@@ -4,3 +4,33 @@ resources:
     seed:
       versionName: "1.2.3-beta"
       
+  - name: notify-slack
+    type: notification
+    integration: "plv2-slackcock1"
+    pointer:
+      recipients:
+        - "#pipeline-pvt"
+        - "#pipeline-public"
+        - "@shiphitchcock1"
+
+  - name: notify-email
+    type: notification
+    integration: "plv2-emailcock1"
+    pointer:
+      recipients: 
+        - "varsha@shippable.com"
+        - "shiphitchcock1@gmail.com"
+        
+  - name: notify-slackcock1
+    type: notification
+    integration: "plv2-slackcock1"
+    pointer:
+      recipients:
+        - "#pipeline-pvt"
+        
+  - name: notify-emailcock1
+    type: notification
+    integration: "plv2-emailcock1"
+    pointer:
+      recipients:
+        - "shiphitchcock1@gmail.com"
