@@ -38,7 +38,7 @@ jobs:
   - name: notify-man3
     type: manifest
     steps:
-      - IN: notify-imagerunc1
+      - IN: notify-imagerunc2
       - IN: triggernotify4
       
   - name: notify-ecsdeploy
