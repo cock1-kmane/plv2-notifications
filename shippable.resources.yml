@@ -85,3 +85,10 @@ resources:
     pointer:
       sourceName : "testCL"
       region: "us-west-2"
+      
+  - name: notify-ecscluster2
+    type: cluster
+    integration: "varshaarun-ecs"
+    pointer:
+      sourceName : "testCL"
+      region: "us-west-2"
