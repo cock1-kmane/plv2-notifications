@@ -7,24 +7,12 @@ jobs:
         bump: patch
       - IN: notify-man1cnrimg
       - IN: triggernotify7
-    on_start:
-      - NOTIFY: notify-emailcock1
-      - NOTIFY: notify-slackcock1
-    on_success:
-      - NOTIFY: notify-emailcock1
-      - NOTIFY: notify-slackcock1
       
   - name: notify-man1cnrimg
     type: manifest
     steps:
       - IN: notify-image1cnr
       - IN: triggernotify1
-    on_start:
-      - NOTIFY: notify-email
-      - NOTIFY: notify-slack
-    on_success:
-      - NOTIFY: notify-email
-      - NOTIFY: notify-slack
       
   - name: notify-man2entrypoint
     type: manifest
@@ -61,29 +49,44 @@ jobs:
 
 # DEPLOYMENTS 
 
-  - name: notify-ecsdeployup1
-    type: ecsDeploy
+  - name: notify-ecsdeployup
+    type: deploy
     steps:
-      - IN: notify-man6invalid
+      - IN: notify-man3driftking
       - IN: notify-ecscluster
       - TASK: managed
         deployMethod: upgrade
-    on_start:
-      - NOTIFY: notify-email
-      - NOTIFY: notify-slack
-    on_failure:
-      - NOTIFY: notify-email
-      - NOTIFY: notify-slack
       
-  - name: notify-ecsdeploybg1
-    type: ecsDeploy
+  - name: notify-ecsdeploybg
+    type: deploy
     steps:
-      - IN: notify-man1cnrimg
+      - IN: notify-man2entrypoint
       - IN: notify-ecscluster
-    on_start:
-      - NOTIFY: notify-emailcock1
-      - NOTIFY: notify-slackcock1
-    on_success:
-      - NOTIFY: notify-emailcock1
-      - NOTIFY: notify-slackcock1
       
+  - name: notify-tripubdeployup
+    type: deploy
+    steps:
+      - IN: notify-man3driftking
+      - IN: notify-tripubcluster
+      - TASK: managed
+        deployMethod: upgrade
+      
+  - name: notify-ecsdeploybg
+    type: deploy
+    steps:
+      - IN: notify-man2entrypoint
+      - IN: notify-tripubcluster
+      
+  - name: notify-gkedeployup
+    type: deploy
+    steps:
+      - IN: notify-man3driftking
+      - IN: notify-gkecluster
+      - TASK: managed
+        deployMethod: upgrade
+      
+  - name: notify-gkedeploybg
+    type: deploy
+    steps:
+      - IN: notify-man2entrypoint
+      - IN: notify-gkecluster
