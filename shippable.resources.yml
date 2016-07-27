@@ -125,6 +125,14 @@ resources:
     seed:
       versionName: "latest"
       
+  - name: notify-image7new 
+    type: image
+    integration: cock1-hub
+    pointer:
+      sourceName: "shippabledocker/pipelinev2"
+    seed:
+      versionName: "deploy.1"
+      
 # DOCKER OPTIONS:
   
   - name: notify-dopts6invalid
