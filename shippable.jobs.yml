@@ -49,7 +49,7 @@ jobs:
     type: manifest
     steps:
       - IN: notify-image1cnr
-      - IN: notify-dopts6invalid
+      #- IN: notify-dopts6invalid
       - IN: triggernotify6
       
   - name: notify-man7scale
