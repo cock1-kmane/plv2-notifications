@@ -153,7 +153,7 @@ resources:
   - name: notifyd-scale4
     type: replicas
     version:
-      count: 3
+      count: 1
         
 #GITREPO:
 
