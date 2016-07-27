@@ -133,6 +133,23 @@ resources:
       links:
         - "plv2-manifest8redis_0_0_055d5014-109c-4c84-9bbe-3009a523:testenv"
         
+#REPLICAS
+
+  - name: notify-scale1
+    type: replicas
+    version:
+      count: 1
+      
+  - name: notify-scale2
+    type: replicas
+    version:
+      count: 2
+
+  - name: notify-scale3
+    type: replicas
+    version:
+      count: 3
+        
 #GITREPO:
 
   - name: "repo_plv2notifications-notifyemailslack"
