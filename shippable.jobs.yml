@@ -103,7 +103,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
     
-  - name: notifyscale-gkedeployup2
+  - name: nscale-gkedup2
     type: deploy
     steps:
       - IN: notify-man7scale
