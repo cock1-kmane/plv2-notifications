@@ -48,7 +48,7 @@ jobs:
   - name: notify-man6invalid
     type: manifest
     steps:
-      - IN: notify-image3env
+      - IN: notify-image1cnr
       #- IN: notify-dopts6invalid
       - IN: triggernotify6
       
