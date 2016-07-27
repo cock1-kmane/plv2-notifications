@@ -79,6 +79,7 @@ jobs:
     type: deploy
     steps:
       - IN: notify-man7scale
+      - IN: notifyd-scale4
       - IN: notify-ecscluster
       
   - name: notify-tripubdeployup
@@ -107,6 +108,7 @@ jobs:
     type: deploy
     steps:
       - IN: notify-man7scale
+      - IN: notifyd-scale4
       - IN: notify-gkecluster
       - TASK: managed
         deployMethod: upgrade
