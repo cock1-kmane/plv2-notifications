@@ -1,4 +1,7 @@
 jobs:
+
+#RELEASE
+
   - name: notify-release
     type: release
     steps:
@@ -7,6 +10,8 @@ jobs:
         bump: patch
       - IN: notify-man1cnrimg
       - IN: triggernotify7
+      
+#MANIFESTS
       
   - name: notify-man1cnrimg
     type: manifest
@@ -46,6 +51,13 @@ jobs:
       - IN: notify-image3env
       - IN: notify-dopts6invalid
       - IN: triggernotify6
+      
+  - name: notify-man7scale
+    type: manifest
+    steps:
+      - IN: notify-image1cnr
+      - IN: notify-scale1
+      - IN: triggernotify8
 
 # DEPLOYMENTS 
 
@@ -61,6 +73,12 @@ jobs:
     type: deploy
     steps:
       - IN: notify-man1cnrimg
+      - IN: notify-ecscluster
+      
+  - name: notifyscale-ecsdeploybg2
+    type: deploy
+    steps:
+      - IN: notify-man7scale
       - IN: notify-ecscluster
       
   - name: notify-tripubdeployup
@@ -81,6 +99,14 @@ jobs:
     type: deploy
     steps:
       - IN: notify-man3driftking
+      - IN: notify-gkecluster
+      - TASK: managed
+        deployMethod: upgrade
+    
+  - name: notifyscale-gkedeployup2
+    type: deploy
+    steps:
+      - IN: notify-man7scale
       - IN: notify-gkecluster
       - TASK: managed
         deployMethod: upgrade
