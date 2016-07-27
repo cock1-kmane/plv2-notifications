@@ -56,7 +56,7 @@ jobs:
     type: manifest
     steps:
       - IN: notify-image1cnr
-      - IN: notify-scale3
+      - IN: notify-scale1
       - IN: triggernotify8
 
 # DEPLOYMENTS 
