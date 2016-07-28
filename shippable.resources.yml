@@ -91,7 +91,7 @@ resources:
     pointer:
       sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
     seed:
-      versionName: "pipeline.7"
+      versionName: "deploy.5"
       
   - name: notify-image3env
     type: image
