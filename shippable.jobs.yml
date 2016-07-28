@@ -63,6 +63,7 @@ jobs:
     type: manifest
     steps:
       - IN: notify-image2cnr
+      - IN: notify-dopts6invalid
       - IN: triggernotify9
 
 # DEPLOYMENTS 
