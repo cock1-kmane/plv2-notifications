@@ -63,6 +63,7 @@ jobs:
     type: manifest
     steps:
       - IN: notify-image2cnr
+      - IN: triggernotify9
 
 # DEPLOYMENTS 
 
@@ -70,6 +71,14 @@ jobs:
     type: deploy
     steps:
       - IN: notify-man3driftking
+      - IN: notify-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
+        
+  - name: notifyup-ecsdeploy2
+    type: deploy
+    steps:
+      - IN: notify-man8
       - IN: notify-ecscluster
       - TASK: managed
         deployMethod: upgrade
@@ -122,6 +131,14 @@ jobs:
     type: deploy
     steps:
       - IN: notify-man3driftking
+      - IN: notify-gkecluster
+      - TASK: managed
+        deployMethod: upgrade
+        
+  - name: notifyup-gkedeploy2
+    type: deploy
+    steps:
+      - IN: notify-man8
       - IN: notify-gkecluster
       - TASK: managed
         deployMethod: upgrade
