@@ -103,6 +103,14 @@ jobs:
       - IN: notify-tripubcluster
       - TASK: managed
         deployMethod: upgrade
+        
+  - name: notifyup-tpdeploy3
+    type: deploy
+    steps:
+      - IN: notify-man5redis
+      - IN: notify-tripubcluster
+      - TASK: managed
+        deployMethod: upgrade
       
   - name: notify-gkedeployup
     type: deploy
