@@ -43,3 +43,8 @@ triggers:
      type: trigger
      version:
        counter: 5
+       
+   - name: triggernotify10
+     type: trigger
+     version:
+       counter: 1
