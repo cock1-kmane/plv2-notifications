@@ -58,6 +58,11 @@ jobs:
       - IN: notify-image1cnr
       - IN: notify-scale1
       - IN: triggernotify8
+      
+  - name: notify-man8
+    type: manifest
+    steps:
+      - IN: notify-image2cnr
 
 # DEPLOYMENTS 
 
