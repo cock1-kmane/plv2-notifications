@@ -48,3 +48,8 @@ triggers:
      type: trigger
      version:
        counter: 1
+       
+   - name: triggernotify11
+     type: trigger
+     version:
+       counter: 1
