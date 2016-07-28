@@ -38,3 +38,8 @@ triggers:
      type: trigger
      version:
        counter: 7
+       
+   - name: triggernotify9
+     type: trigger
+     version:
+       counter: 1
