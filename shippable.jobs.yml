@@ -65,6 +65,19 @@ jobs:
       - IN: notify-image4entrypoint
       #- IN: notify-dopts6invalid
       - IN: triggernotify9
+      
+  - name: notify-man9
+    type: manifest
+    steps:
+      - IN: notify-image4entrypoint
+      - IN: triggernotify10
+      
+  - name: notify-man10
+    type: manifest
+    steps:
+      - IN: notify-image4entrypoint
+      #- IN: notify-dopts6invalid
+      - IN: triggernotify11
 
 # DEPLOYMENTS 
 
@@ -111,6 +124,12 @@ jobs:
       - IN: notify-man1cnrimg
       - IN: notify-tripubcluster
       
+  - name: notifybg-tpdeploy2
+    type: deploy
+    steps:
+      - IN: notify-man10
+      - IN: notify-tripubcluster
+      
   - name: notifyup-tripubdeploy2
     type: deploy
     steps:
@@ -136,13 +155,13 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  #- name: notifyup-gkedeploy2
-   # type: deploy
-    #steps:
-     # - IN: notify-man8
-      #- IN: notify-gkecluster
-    #  - TASK: managed
-     #   deployMethod: upgrade
+  - name: notifyup-gkedeploy2
+    type: deploy
+    steps:
+      - IN: notify-man9
+      - IN: notify-gkecluster
+      - TASK: managed
+        deployMethod: upgrade
     
   - name: nscale-gkedup2
     type: deploy
