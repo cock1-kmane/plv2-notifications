@@ -108,6 +108,7 @@ jobs:
     type: deploy
     steps:
       - IN: notify-man5redis
+      - IN: notify-dopts6invalid
       - IN: notify-tripubcluster
       - TASK: managed
         deployMethod: upgrade
