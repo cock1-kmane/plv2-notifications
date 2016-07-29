@@ -47,7 +47,7 @@ triggers:
    - name: triggernotify10
      type: trigger
      version:
-       counter: 7
+       counter: 8
        
    - name: triggernotify11
      type: trigger
