@@ -71,7 +71,7 @@ jobs:
     steps:
       - IN: notify-image4entrypoint
       - IN: notify-dopts6invalid
-      - IN: notify-scale3
+      - IN: notify-scale1
       - IN: triggernotify10
       
   - name: notify-man10
