@@ -58,3 +58,8 @@ triggers:
      type: trigger
      version:
        counter: 7
+       
+   - name: triggernotify13
+     type: trigger
+     version:
+       counter: 1
