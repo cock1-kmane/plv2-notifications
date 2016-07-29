@@ -139,6 +139,8 @@ resources:
     type: dockerOptions
     version:
       memory: 128
+      portMappings:
+        - "80:80"
   
   - name: notify-dopts6invalid
     type: dockerOptions
