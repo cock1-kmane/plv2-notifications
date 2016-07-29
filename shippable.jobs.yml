@@ -200,6 +200,7 @@ jobs:
     type: deploy
     steps:
       - IN: notify-man3driftking
+      - IN: notify-dopts1
       - IN: notify-dclcluster
         
   - name: notify-ddcdeploy
