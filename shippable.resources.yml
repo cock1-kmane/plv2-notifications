@@ -134,6 +134,11 @@ resources:
       versionName: "deploy.1"
       
 # DOCKER OPTIONS:
+
+  - name: notify-dopts1
+    type: dockerOptions
+    version:
+      memory: 128
   
   - name: notify-dopts6invalid
     type: dockerOptions
