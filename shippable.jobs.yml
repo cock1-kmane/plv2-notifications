@@ -80,6 +80,14 @@ jobs:
       - IN: notify-image4entrypoint
       #- IN: notify-dopts6invalid
       - IN: triggernotify11
+      
+  - name: notifyscale-man11
+    type: manifest
+    steps:
+      - IN: notify-man1cnrimg
+      - IN: notify-dopts1
+      - IN: notifyd-scale4
+      - IN: triggernotify12
 
 # DEPLOYMENTS 
 
