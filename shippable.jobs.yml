@@ -94,7 +94,7 @@ jobs:
     steps:
       - IN: notify-image1cnr
       #- IN: notify-dopts1
-      - IN: notifyd-scale4
+      #- IN: notifyd-scale4
       - IN: triggernotify13
 
 # DEPLOYMENTS 
@@ -177,6 +177,7 @@ jobs:
     type: deploy
     steps:
       - IN: notifyscale-man12
+      - IN: notifyd-scale4
       #- IN: notify-dopts6invalid
       - IN: notify-tripubcluster
       - TASK: managed
