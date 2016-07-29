@@ -139,8 +139,8 @@ resources:
     type: dockerOptions
     version:
       memory: 128
-      portMappings:
-        - "80:80"
+     # portMappings:
+      #  - "80:80"
   
   - name: notify-dopts6invalid
     type: dockerOptions
@@ -170,7 +170,7 @@ resources:
   - name: notifyd-scale4
     type: replicas
     version:
-      count: 5
+      count: 1
         
 #GITREPO:
 
