@@ -62,4 +62,4 @@ triggers:
    - name: triggernotify13
      type: trigger
      version:
-       counter: 1
+       counter: 2
