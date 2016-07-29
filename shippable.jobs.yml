@@ -110,7 +110,7 @@ jobs:
   - name: notifyup2-ecsdeploy3
     type: deploy
     steps:
-      - IN: notify-man11
+      - IN: notifyscale-man11
       - IN: notify-ecscluster
       - TASK: managed
         deployMethod: upgrade
