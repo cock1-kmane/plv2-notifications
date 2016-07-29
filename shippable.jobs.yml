@@ -106,6 +106,14 @@ jobs:
       - IN: notify-ecscluster
       - TASK: managed
         deployMethod: upgrade
+        
+  - name: notifyup2-ecsdeploy3
+    type: deploy
+    steps:
+      - IN: notify-man11
+      - IN: notify-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
       
   - name: notify-ecsdeploybg
     type: deploy
