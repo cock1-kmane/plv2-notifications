@@ -57,4 +57,4 @@ triggers:
    - name: triggernotify12
      type: trigger
      version:
-       counter: 3
+       counter: 4
