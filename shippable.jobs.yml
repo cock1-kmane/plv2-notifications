@@ -88,6 +88,14 @@ jobs:
       - IN: notify-dopts1
       - IN: notifyd-scale4
       - IN: triggernotify12
+      
+  - name: notifyscale-man12
+    type: manifest
+    steps:
+      - IN: notify-image1cnr
+      #- IN: notify-dopts1
+      - IN: notifyd-scale4
+      - IN: triggernotify13
 
 # DEPLOYMENTS 
 
@@ -160,6 +168,15 @@ jobs:
     type: deploy
     steps:
       - IN: notify-man5redis
+      #- IN: notify-dopts6invalid
+      - IN: notify-tripubcluster
+      - TASK: managed
+        deployMethod: upgrade
+        
+  - name: notifyup1-tpdeploy4
+    type: deploy
+    steps:
+      - IN: notifyscale-man12
       #- IN: notify-dopts6invalid
       - IN: notify-tripubcluster
       - TASK: managed
