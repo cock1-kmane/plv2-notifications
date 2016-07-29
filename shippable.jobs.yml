@@ -84,7 +84,7 @@ jobs:
   - name: notifyscale-man11
     type: manifest
     steps:
-      - IN: notify-man1cnrimg
+      - IN: notify-image1cnr
       - IN: notify-dopts1
       - IN: notifyd-scale4
       - IN: triggernotify12
