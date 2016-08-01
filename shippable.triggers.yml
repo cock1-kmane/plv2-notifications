@@ -2,7 +2,7 @@ triggers:
    - name: triggersen1
      type: trigger
      version:
-       counter: 1
+       counter: 2
        
    - name: triggersen2
      type: trigger
@@ -12,4 +12,4 @@ triggers:
    - name: triggersen3
      type: trigger
      version:
-       counter: 3
+       counter: 2
