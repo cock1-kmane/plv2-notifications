@@ -35,7 +35,7 @@ jobs:
 
 # DEPLOYMENTS 
 
-  - name: sen-ecsdeployup1
+  - name: sen-ecsdeployup2
     type: deploy
     steps:
       - IN: sen-man2invalid
