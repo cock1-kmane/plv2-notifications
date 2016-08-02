@@ -11,9 +11,9 @@ resources:
       
   - name: sen-ecscluster2invalid
     type: cluster
-    integration: plv2-ecs
+    integration: plv2-ecstest
     pointer:
-      sourceName : "wrongcluster"
+      sourceName : "testCL"
       region: "us-west-2"
       
 #VERSIONS
