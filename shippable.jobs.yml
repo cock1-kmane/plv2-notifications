@@ -104,5 +104,5 @@ jobs:
       - IN: sen-version3
       - IN: sen-ecsdeployup5
       - TASK: managed
-        bump: major
+        bump: alpha
         
