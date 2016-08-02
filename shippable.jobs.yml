@@ -37,6 +37,7 @@ jobs:
     type: manifest
     steps:
       - IN: sen-image1cnr
+      - IN: sen-dopts1
       - IN: triggersen4
     flags:
       - sen-man3
