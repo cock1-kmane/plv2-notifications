@@ -219,6 +219,7 @@ jobs:
     steps:
       - IN: notify-man3driftking
       - IN: notify-dopts1
+      - IN: notify-scale1
       - IN: notify-dclcluster
         
   - name: notify-ddcdeploy
