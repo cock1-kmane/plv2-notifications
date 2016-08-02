@@ -23,6 +23,16 @@ resources:
     seed:
       versionName: "1.2.34-beta"
       
+  - name: sen-version2
+    type: version
+    seed:
+      versionName: "11.2.34-beta"
+      
+  - name: sen-version3
+    type: version
+    seed:
+      versionName: "1.0.3"
+      
 #NOTIFICATIONS
       
   - name: sen-slack
