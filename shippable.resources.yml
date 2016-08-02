@@ -99,3 +99,25 @@ resources:
     version:
       links:
         - "plv2-manifest8redis_0_0_055d5014-109c-4c84-9bbe-3009a523:testenv"
+        
+  - name: sen-dopts1
+    type: dockerOptions
+    version:
+      memory: 128
+    
+#PARAMS
+
+  - name: sen-params1
+    type: params
+    version:
+      params:
+        MONGO_API_URL: "localhost:28017"
+        TEST: BETA
+        pipelinev2: fleming
+        
+#REPLICAS
+
+  - name: sen-scale1
+    type: replicas
+    version:
+      count: 1
