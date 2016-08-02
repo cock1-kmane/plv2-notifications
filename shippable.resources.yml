@@ -9,6 +9,13 @@ resources:
       sourceName : "testCL"
       region: "us-west-2"
       
+  - name: sen-ecscluster2invalid
+    type: cluster
+    integration: plv2-ecs
+    pointer:
+      sourceName : "wrongcluster"
+      region: "us-west-2"
+      
 #VERSIONS
 
   - name: sen-version
