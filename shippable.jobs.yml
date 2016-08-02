@@ -93,6 +93,7 @@ jobs:
     type: deploy
     steps:
       - IN: sen-release2
+        switch: off
       - IN: sen-ecscluster
       - TASK: managed
         deployMethod: upgrade
