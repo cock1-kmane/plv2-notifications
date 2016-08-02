@@ -38,6 +38,8 @@ jobs:
     steps:
       - IN: sen-image1cnr
       - IN: triggersen4
+    flags:
+      - sen-man3
 
 # DEPLOYMENTS 
 
