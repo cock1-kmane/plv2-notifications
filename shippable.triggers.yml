@@ -23,3 +23,13 @@ triggers:
      type: trigger
      version:
        counter: 3
+       
+   - name: triggersen6
+     type: trigger
+     version:
+       counter: 1
+       
+   - name: triggersen7
+     type: trigger
+     version:
+       counter: 1
