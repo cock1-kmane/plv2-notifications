@@ -33,11 +33,10 @@ jobs:
       - IN: sen-dopts1invalid
       - IN: triggersen3
       
-  - name: sen-man3cnrimg
+  - name: sen-man3
     type: manifest
     steps:
       - IN: sen-image1cnr
-      - IN: triggersen2
       - IN: triggersen4
 
 # DEPLOYMENTS 
@@ -69,3 +68,36 @@ jobs:
     on_failure:
       - NOTIFY: sen-email
       - NOTIFY: sen-slack
+      
+  - name: sen-ecsdeployup4
+    type: deploy
+    steps:
+      - IN: sen-man3
+      - IN: sen-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
+      
+  - name: sen-release2
+    type: release
+    steps:
+      - IN: sen-version2
+      - IN: sen-ecsdeployup4
+      - TASK: managed
+        bump: beta
+        
+  - name: sen-ecsdeployup5
+    type: deploy
+    steps:
+      - IN: sen-release2
+      - IN: sen-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
+      
+  - name: sen-release3
+    type: release
+    steps:
+      - IN: sen-version3
+      - IN: sen-ecsdeployup5
+      - TASK: managed
+        bump: major
+        
