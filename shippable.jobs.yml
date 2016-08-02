@@ -96,6 +96,14 @@ jobs:
       #- IN: notify-dopts1
       #- IN: notifyd-scale4
       - IN: triggernotify13
+      
+  - name: notifydcl-man13
+    type: manifest
+    steps:
+      - IN: notify-image5workingdir
+      #- IN: notify-dopts1
+      #- IN: notifyd-scale4
+      - IN: triggernotify14
 
 # DEPLOYMENTS 
 
@@ -220,6 +228,12 @@ jobs:
       - IN: notify-man3driftking
       - IN: notify-dopts1
       - IN: notify-scale1
+      - IN: notify-dclcluster
+      
+  - name: notify-dcldeploy2
+    type: deploy
+    steps:
+      - IN: notifydcl-man13
       - IN: notify-dclcluster
         
   - name: notify-ddcdeploy
