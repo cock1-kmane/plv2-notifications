@@ -60,7 +60,7 @@ jobs:
     type: deploy
     steps:
       - IN: sen-man3cnrimg
-      - IN: sen-ecscluster2invalid
+      - IN: sen-ecscluster2invalidtest
       - TASK: managed
         deployMethod: upgrade
     on_start:
