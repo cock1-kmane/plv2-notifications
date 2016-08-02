@@ -74,6 +74,14 @@ resources:
     seed:
       versionName: "entrypoint"
       
+  - name: sen-image3
+    type: image
+    integration: cock1-hub
+    pointer:
+      sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
+    seed:
+      versionName: "deploy.5"
+      
 # DOCKER OPTIONS:
   
   - name: sen-dopts1invalid
