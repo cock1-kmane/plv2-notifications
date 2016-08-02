@@ -39,6 +39,7 @@ jobs:
       - IN: sen-image1cnr
       - IN: sen-dopts1
       - IN: sen-params1
+      - IN: sen-scale1
       - IN: triggersen4
     flags:
       - sen-man3
@@ -93,7 +94,7 @@ jobs:
     type: deploy
     steps:
       - IN: sen-release2
-        switch: off
+        switch: on
       - IN: sen-ecscluster
       - TASK: managed
         deployMethod: upgrade
