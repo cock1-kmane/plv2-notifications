@@ -18,3 +18,8 @@ triggers:
      type: trigger
      version:
        counter: 3
+       
+   - name: triggersen5
+     type: trigger
+     version:
+       counter: 3
