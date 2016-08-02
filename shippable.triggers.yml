@@ -13,3 +13,8 @@ triggers:
      type: trigger
      version:
        counter: 3
+       
+   - name: triggersen4
+     type: trigger
+     version:
+       counter: 1
