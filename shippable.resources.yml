@@ -22,7 +22,13 @@ resources:
     pointer:
       sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
       region: "us-east-2"
-
+      
+  - name: dd-dclclusterinvalid
+    type: cluster
+    integration: plv2-dcl
+    pointer:
+    sourceName: "cluster-dcl" # we can give anything it deploy instances based on region not by cluster name
+      
 #NOTIFICATIONS
       
   - name: dd-slack
