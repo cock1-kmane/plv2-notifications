@@ -8,6 +8,20 @@ resources:
     pointer:
       sourceName : "testCL"
       region: "us-west-2"
+      
+  - name: dd-gkecluster
+    type: cluster
+    integration: plv2-gke
+    pointer:
+      sourceName: "small-cluster" #name of the cluster we are deploying.
+      region: "us-east1-d"
+      
+  - name: dd-tpcluster
+    type: cluster
+    integration: plv2-tripub
+    pointer:
+      sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
+      region: "us-east-2"
 
 #NOTIFICATIONS
       
