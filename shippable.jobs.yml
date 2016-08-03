@@ -19,7 +19,7 @@ jobs:
     steps:
       - IN: dd-image3
       - IN: dd-params1
-      - IN: dd-scale3
+     # - IN: dd-scale3
       - IN: dd-tg2
     flags: 
       - dd-man2
@@ -64,7 +64,7 @@ jobs:
       - NOTIFY: dd-email
       - NOTIFY: dd-slack
         
-  - name: dd-ecsdeployup1
+  - name: dd-ecsdeployup2
     type: deploy
     steps:
       - IN: dd-man2
