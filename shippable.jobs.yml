@@ -56,13 +56,13 @@ jobs:
       - NOTIFY: dd-email
       - NOTIFY: dd-slack
         
-  #- name: dd-ecsdeployup1
-   # type: deploy
-    #steps:
-     # - IN: dd-man2
-      #- IN: dd-ecscluster
-      #- TASK: managed
-       # deployMethod: upgrade
+  - name: dd-ecsdeployup1
+    type: deploy
+    steps:
+      - IN: dd-man2
+      - IN: dd-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
         
   - name: dd-ecsdeploybg1
     type: deploy
