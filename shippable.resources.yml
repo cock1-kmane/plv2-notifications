@@ -107,7 +107,7 @@ resources:
         
 #REPLICAS
 
-  - name: dd-scale1
+  - name: dd-scale3
     type: replicas
     version:
-      count: 1
+      count: 3
