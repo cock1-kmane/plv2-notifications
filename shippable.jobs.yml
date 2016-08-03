@@ -19,6 +19,7 @@ jobs:
     steps:
       - IN: dd-image3
       - IN: dd-params1
+      - IN: dd-scale3
       - IN: dd-tg2
     flags: 
       - dd-man2
