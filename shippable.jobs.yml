@@ -40,6 +40,14 @@ jobs:
     flags:
       - dd-man4     
       
+  - name: dddcl-man5
+    type: manifest
+    steps:
+      - IN: dd-image1
+      - IN: dd-tg5
+    flags:
+      - dd-man4   
+      
 # DEPLOYMENTS 
 
   - name: ddnotify-ecsdeployup
@@ -103,4 +111,10 @@ jobs:
     steps:
       - IN: dd-man4
       - IN: dd-tpcluster
+      
+  - name: dd-dcldeploy
+    type: deploy
+    steps:
+      - IN: dddcl-man5
+      - IN: dd-dclclusterinvalid
       
