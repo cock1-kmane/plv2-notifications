@@ -62,13 +62,13 @@ jobs:
      # - IN: dd-man3
       #- IN: dd-ecscluster
       
-  - name: dd-gkedeployup1
-    type: deploy
-    steps:
-      - IN: dd-man2
-      - IN: dd-gkecluster
-      - TASK: managed
-        deployMethod: upgrade
+ # - name: dd-gkedeployup1
+  #  type: deploy
+   # steps:
+    #  - IN: dd-man2
+     # - IN: dd-gkecluster
+#      - TASK: managed
+ #       deployMethod: upgrade
         
   - name: dd-gkedeploybg1
     type: deploy
@@ -76,13 +76,13 @@ jobs:
       - IN: dd-man3
       - IN: dd-gkecluster
       
-  - name: dd-tpdeployup1
-    type: deploy
-    steps:
-      - IN: dd-man2
-      - IN: dd-tpcluster
-      - TASK: managed
-        deployMethod: upgrade
+ # - name: dd-tpdeployup1
+  #  type: deploy
+   # steps:
+    #  - IN: dd-man2
+     # - IN: dd-tpcluster
+      #- TASK: managed
+       # deployMethod: upgrade
         
   - name: dd-tpdeploybg1
     type: deploy
