@@ -34,7 +34,7 @@ jobs:
     type: manifest
     steps:
       - IN: dd-image1
-        versionNumber: 16
+        versionNumber: 128
       - IN: dd-tg3
     flags:
       - dd-man4invalid
