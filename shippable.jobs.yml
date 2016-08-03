@@ -18,6 +18,7 @@ jobs:
     type: manifest
     steps:
       - IN: dd-image3
+      - IN: dd-params1
       - IN: dd-tg2
     flags: 
       - dd-man2
@@ -59,14 +60,6 @@ jobs:
     type: deploy
     steps:
       - IN: dd-man2
-      - IN: dd-ecscluster
-      - TASK: managed
-        deployMethod: upgrade
-        
-  - name: dd-ecsdeployup1invalid
-    type: deploy
-    steps:
-      - IN: dd-man4invalid
       - IN: dd-ecscluster
       - TASK: managed
         deployMethod: upgrade
