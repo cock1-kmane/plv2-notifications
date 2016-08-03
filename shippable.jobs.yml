@@ -17,6 +17,13 @@ jobs:
     steps:
       - IN: dd-image3
       - IN: dd-tg2
+ 
+  - name: dd-man3
+    type: manifest
+    steps:
+      - IN: dd-image1
+      - IN: dd-tg3     
+
       
 # DEPLOYMENTS 
 
@@ -28,17 +35,23 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
     on_start:
-      - NOTIFY: sen-email
-      - NOTIFY: sen-slack
+      - NOTIFY: dd-email
+      - NOTIFY: dd-slack
     on_failure:
-      - NOTIFY: sen-email
-      - NOTIFY: sen-slack
+      - NOTIFY: dd-email
+      - NOTIFY: dd-slack
         
   - name: dd-ecsdeployup1
     type: deploy
     steps:
-      - IN: 
-      - IN: sen-ecscluster
+      - IN: dd-man2
+      - IN: dd-ecscluster
       - TASK: managed
         deployMethod: upgrade
+        
+  - name: dd-ecsdeploybg1
+    type: deploy
+    steps:
+      - IN: dd-man3
+      - IN: dd-ecscluster
         
