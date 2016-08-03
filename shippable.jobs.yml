@@ -70,11 +70,11 @@ jobs:
  #     - TASK: managed
   #      deployMethod: upgrade
         
- # - name: dd-gkedeploybg1
-  #  type: deploy
-   # steps:
-    #  - IN: dd-man3
-     # - IN: dd-gkecluster
+  - name: dd-gkedeploybg1
+    type: deploy
+    steps:
+      - IN: dd-man3
+      - IN: dd-gkecluster
       
   #- name: dd-tpdeployup1
    # type: deploy
@@ -84,8 +84,8 @@ jobs:
       #- TASK: managed
        # deployMethod: upgrade
         
- # - name: dd-tpdeploybg1
-  #  type: deploy
-   # steps:
-    #  - IN: dd-man3
-     # - IN: dd-tpcluster
+  - name: dd-tpdeploybg1
+    type: deploy
+    steps:
+      - IN: dd-man3
+      - IN: dd-tpcluster
