@@ -46,7 +46,7 @@ jobs:
       - IN: dd-image1
       - IN: dd-tg5
     flags:
-      - dd-man4   
+      - dd-man5   
       
 # DEPLOYMENTS 
 
