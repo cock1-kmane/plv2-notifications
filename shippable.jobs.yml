@@ -32,6 +32,14 @@ jobs:
     flags:
       - dd-man3
       
+  - name: dd-man4
+    type: manifest
+    steps:
+      - IN: dd-image1
+      - IN: dd-tg4
+    flags:
+      - dd-man4     
+      
 # DEPLOYMENTS 
 
   - name: ddnotify-ecsdeployup
@@ -89,3 +97,10 @@ jobs:
     steps:
       - IN: dd-man3
       - IN: dd-tpcluster
+
+  - name: dd-tpdeploybg2
+    type: deploy
+    steps:
+      - IN: dd-man4
+      - IN: dd-tpcluster
+      
