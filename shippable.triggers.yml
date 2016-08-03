@@ -7,7 +7,7 @@ triggers:
    - name: dd-tg2
      type: trigger
      version:
-       counter: 5
+       counter: 6
        
    - name: dd-tg3
      type: trigger
