@@ -55,9 +55,9 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  - name: dd-ecsdeploybg1
-    type: deploy
-    steps:
-      - IN: dd-man3
-      - IN: dd-ecscluster
+  #- name: dd-ecsdeploybg1
+   # type: deploy
+    #steps:
+     # - IN: dd-man3
+      #- IN: dd-ecscluster
         
