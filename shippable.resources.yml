@@ -2,40 +2,40 @@ resources:
 
 #CLUSTERS
 
-  - name: sen-ecscluster
+  - name: en-ecscluster
     type: cluster
     integration: plv2-ecs
     pointer:
       sourceName : "testCL"
       region: "us-west-2"
       
-  - name: sen-ecscluster2invalid
-    type: cluster
-    integration: plv2-ecstest
-    pointer:
-      sourceName : "testCL"
-      region: "us-west-2"
+  # - name:sen-ecscluster2invalid
+  #   type: cluster
+  #   integration: plv2-ecstest
+  #   pointer:
+  #     sourceName : "testCL"
+  #     region: "us-west-2"
       
 #VERSIONS
 
-  - name: sen-version
+  - name: en-version
     type: version
     seed:
       versionName: "1.2.34-beta"
       
-  - name: sen-version2
+  - name: en-version2
     type: version
     seed:
       versionName: "11.2.34-beta"
       
-  - name: sen-version3
+  - name: en-version3
     type: version
     seed:
       versionName: "1.0.3"
       
 #NOTIFICATIONS
       
-  - name: sen-slack
+  - name: en-slack
     type: notification
     integration: "plv2-slackcock1"
     pointer:
@@ -44,7 +44,7 @@ resources:
         - "#pipeline-public"
         - "@shiphitchcock1"
 
-  - name: sen-email
+  - name: en-email
     type: notification
     integration: "plv2-emailcock1"
     pointer:
@@ -52,14 +52,14 @@ resources:
         - "varsha@shippable.com"
         - "shiphitchcock1@gmail.com"
         
-  - name: sen-slackcock1
+  - name: en-slackcock1
     type: notification
     integration: "plv2-slackcock1"
     pointer:
       recipients:
         - "#pipeline-pvt"
         
-  - name: sen-emailcock1
+  - name: en-emailcock1
     type: notification
     integration: "plv2-emailcock1"
     pointer:
@@ -68,7 +68,7 @@ resources:
         
 #IMAGES
         
-  - name: sen-image1cnr
+  - name: en-image1cnr
     type: image
     integration: cock1-hub
     pointer:
@@ -76,7 +76,7 @@ resources:
     seed:
       versionName: "deploy.4"
       
-  - name: sen-image2entrypoint
+  - name: en-image2entrypoint
     type: image
     integration: cock1-hub
     pointer:
@@ -84,7 +84,7 @@ resources:
     seed:
       versionName: "entrypoint"
       
-  - name: sen-image3
+  - name: en-image3
     type: image
     integration: cock1-hub
     pointer:
@@ -94,20 +94,20 @@ resources:
       
 # DOCKER OPTIONS:
   
-  - name: sen-dopts1invalid
+  - name: en-dopts1invalid
     type: dockerOptions
     version:
       links:
         - "plv2-manifest8redis_0_0_055d5014-109c-4c84-9bbe-3009a523:testenv"
         
-  - name: sen-dopts1
+  - name: en-dopts1
     type: dockerOptions
     version:
       memory: 128
     
 #PARAMS
 
-  - name: sen-params1
+  - name: en-params1
     type: params
     version:
       params:
@@ -117,7 +117,7 @@ resources:
         
 #REPLICAS
 
-  - name: sen-scale1
+  - name: en-scale1
     type: replicas
     version:
       count: 1
