@@ -14,22 +14,22 @@ triggers:
      version:
        counter: 3
        
-   - name: triggersen4
-     type: trigger
-     version:
-       counter: 5
+   # - name: triggersen4
+   #  type: trigger
+   #  version:
+   #     counter: 5
        
-   - name: triggersen5
-     type: trigger
-     version:
-       counter: 3
+   # - name: triggersen5
+   #  type: trigger
+   #  version:
+   #     counter: 3
        
-   - name: triggersen6
-     type: trigger
-     version:
-       counter: 1
+   # - name: triggersen6
+   #  type: trigger
+   #  version:
+   #     counter: 1
        
-   - name: triggersen7
-     type: trigger
-     version:
-       counter: 1
+   # - name: triggersen7
+   #  type: trigger
+   #  version:
+   #     counter: 1
