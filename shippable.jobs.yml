@@ -1,5 +1,5 @@
 jobs:
-  - name: sen-release
+  - name: en-release
     type: release
     steps:
       - IN: sen-version
@@ -14,7 +14,7 @@ jobs:
       - NOTIFY: sen-emailcock1
       - NOTIFY: sen-slackcock1
       
-  - name: sen-man1cnrimg
+  - name: en-man1cnrimg
     type: manifest
     steps:
       - IN: sen-image1cnr
@@ -26,7 +26,7 @@ jobs:
       - NOTIFY: sen-email
       - NOTIFY: sen-slack
       
-  - name: sen-man2invalid
+  - name: en-man2invalid
     type: manifest
     steps:
       - IN: sen-image2entrypoint
