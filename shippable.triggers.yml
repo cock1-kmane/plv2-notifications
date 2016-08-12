@@ -1,35 +1,15 @@
 triggers:
-   - name: triggersen1
+   - name: triggeren1
      type: trigger
      version:
        counter: 2
        
-   - name: triggersen2
+   - name: triggeren2
      type: trigger
      version:
        counter: 2
        
-   - name: triggersen3
+   - name: triggeren3
      type: trigger
      version:
        counter: 3
-       
-   # - name: triggersen4
-   #  type: trigger
-   #  version:
-   #     counter: 5
-       
-   # - name: triggersen5
-   #  type: trigger
-   #  version:
-   #     counter: 3
-       
-   # - name: triggersen6
-   #  type: trigger
-   #  version:
-   #     counter: 1
-       
-   # - name: triggersen7
-   #  type: trigger
-   #  version:
-   #     counter: 1
